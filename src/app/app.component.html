@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<input id="cardTitleInput" [(ngModel)]="cardTitle" placeholder = "Enter the title" /><br>
+<button (click)="addNewToDo(cardTitle)" >add</button>
+
+<div *ngFor="let item of items" let i=index>
+  <div>
+    <label>{{item.cardTitle}}</label><button (click)="deleteTodo(i)">Remove</button>
+  </div>
+</div>   
+
+<router-outlet></router-outlet>
