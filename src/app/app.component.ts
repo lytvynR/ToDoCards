@@ -11,7 +11,7 @@ export class Item {
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-main',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

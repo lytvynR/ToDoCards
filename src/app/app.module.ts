@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LooginPageComponent } from './loogin-page/loogin-page.component';
+import { RegisterFieldComponent } from './register-field/register-field.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LooginPageComponent,
+    RegisterFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -16,6 +20,6 @@ import { AppComponent } from './app.component';
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
