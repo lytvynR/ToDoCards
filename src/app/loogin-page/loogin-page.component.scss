@@ -1,14 +1,8 @@
 $secondColor:   #fe9900 ;
 $mainFont: Phenomena;
 $mainGreen: #658138;
-*{
-    box-sizing: border-box;  
-    font-size: 22px;
-    font-family: $mainFont;
-}
-a{
-    text-decoration: none;
-}
+
+
 
 .forgot-password{
     font-size: 22px;
@@ -79,36 +73,8 @@ a{
     padding: 15px 15px;  
     background-color: lighten($mainGreen, 10%);
 }
-.buttons {
-    font-family: $mainFont;
-    font-size: 24px;
-    background-color: $secondColor;
-    color: #fff;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-   box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.36);
- }
-  .buttons:hover {
-    background-color: lighten($secondColor, 20%);
-    cursor: pointer;
- }
 
- .input-field {
-    font-size: 26px;
-    padding: 5px 10px;
-    cursor: text;
-    font-family: Phenomena;
-    border: 2px solid lighten($secondColor, 30%);
- }
- .input-field:hover {
-    border: 2px solid  $secondColor;
- }
- .input-field:focus{
-    border: 2px solid  $secondColor;
-    outline: none;
- }
+ 
 
 //================================
 

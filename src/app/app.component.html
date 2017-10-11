@@ -1,4 +1,48 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+<div class="header">
+  <div class="user-info">
+    Name:&nbsp;<span>UserName</span><br>
+    Position:&nbsp;<span>Position</span>
+  </div>
+  <div class="right-side-hedder">
+    <div class="exit-wrapper">
+    <button disabled="disabled" class="buttons">exit</button>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="card-info-field">
+    <button class="buttons add-new-card"> Add new Card</button>
+    <hr>
+    <form action="" id="card-info-form">
+      <label>Card name:</label><label>CardName</label><br>
+      <Label>Description:</Label><label>description</label><br>
+      <br>
+      <label>Estimated time: {{time}} hrs</label>
+      <input type="range" min="1" max="40" step="1" value="{{time}}" name="Estimated range"  id="estimated-time" [(ngModel)]="time"><br>
+      <button class="buttons take-a-card">Take a card</button>
+    </form>
+  </div>
+
+  <div class="scrum-board">
+    <div class="to-do scramboard-column">
+      <div class="to-do-header scramboard-header">To do</div>
+    </div>
+    <div class="in-progress scramboard-column">
+      <div class="in-progress-header scramboard-header">In progress</div>
+    </div>
+    <div class="testing scramboard-column">
+      <div class="testing-header scramboard-header">Testing</div>
+    </div>
+    <div class="done scramboard-column">
+      <div class="done-header scramboard-header">Done</div>
+    </div>
+  </div>
+</div>
+
+
 <div class="AddItemField">
 <input id="cardTitleInput" [(ngModel)]="cardTitle" placeholder = "Enter the title" /><br>
 <button (click)="addNewToDo(cardTitle)" >add</button>
@@ -9,5 +53,5 @@
   </div>
 </div>   
 
-<router-outlet></router-outlet>
+
 </div>

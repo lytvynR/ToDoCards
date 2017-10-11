@@ -19,6 +19,8 @@ export class Item {
 
 
 export class AppComponent {
+  time: number=1;
+  
   cardTitle: string;
 
   items: Item[] = [];
