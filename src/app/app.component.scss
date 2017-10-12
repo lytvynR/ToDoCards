@@ -63,7 +63,8 @@
 .scramboard-column{
     background-color: firebrick;
     min-height: 500px;
-    flex-grow: 1;
+    width: 25%;
+    min-width: 220px;
     border: 2px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
