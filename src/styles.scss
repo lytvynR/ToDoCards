@@ -2,8 +2,9 @@
 @import url("reset.css");
 
 $secondColor:   #fe9900 ;
+$background: #e5e2d3;
 $mainFont: Phenomena;
-$mainGreen: #658138;
+$mainRed: #D84434;
 
 *{
     box-sizing: border-box;  
@@ -16,17 +17,20 @@ a{
 }
 body{
     min-width: 1120px;
+    background-color: $background;
 }
 
 //=================header============================
 .header{
-    min-height: 80px;
-    color: black;
-    background-color: $mainGreen;
-    padding: 10px 20px 10px 20px;
+    min-height: 60px;
+    color: #fff;
+    background-color: $mainRed;
+    padding: 0px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+ 
   
 }
 .user-info{
@@ -47,20 +51,25 @@ body{
     display: inline-block;
   }
   .main-menu{
-     width: auto;
+     width: 700px;
      display: flex;
      justify-content: center;
   }
   .main-menu li{
-      display: inline-block;
-      margin-right: 50px;
-      background-color: $mainGreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      background-color: $mainRed;
+      width: 25%;
+      height: 60px;
+      
   }
   .last-menu-item{
     margin-right: 0;
 }
 .main-menu li:hover{
-   background-color: lighten($mainGreen, 20%);
+   background-color: lighten($mainRed, 10%);
    cursor: pointer;
 }
   //===========================================================
@@ -92,6 +101,7 @@ body{
     cursor: text;
     font-family: Phenomena;
     border: 2px solid lighten($secondColor, 30%);
+    display: inline-block;
  }
  .input-field:hover {
     border: 2px solid  $secondColor;
@@ -107,8 +117,6 @@ body{
     width: 250px;
     color: #fff;
     margin: 10px;
-    border: 1px solid $secondColor;
-    background-color: khaki;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
@@ -123,3 +131,18 @@ body{
 }
   //===========================================================
 
+  //==========================priority-clases==================
+
+  .high{
+      background-color: #ff0000;
+      border: 2px solid darken(#ff0000, 20%);
+  }
+  .medium{
+      background-color: yellow;
+      border: 2px solid darken(#ffff00, 20%);
+  }
+  .low{
+      background-color: green;
+      border: 2px solid darken(#008000, 20%);
+
+  }

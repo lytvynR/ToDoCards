@@ -1,3 +1,5 @@
+$mainRed: #D84434;
+
 .content{
     display: flex;
     justify-content: space-between;
@@ -6,13 +8,13 @@
     min-height: 500px;
 }
 .scrum-board{
-    flex-grow: 3.5;
-    background-color: blue;
+    flex-basis: 100%;
     min-height: 500px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: flex-start;
+    color: $mainRed;
 
 }
 .scramboard-header{
@@ -20,20 +22,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $mainRed;
 }
 .scramboard-column{
-    background-color: firebrick;
+    background-color: #e5e2d3;
     min-height: 500px;
     width: 25%;
     min-width: 220px;
-    border: 2px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border: 2px solid $mainRed;
+    border-right: 1px solid $mainRed;
+    border-left: 1px solid $mainRed;
 }
 .to-do{
-    border-left: 2px solid black;
+    border-left: 2px solid $mainRed;
 }
 .done{
-    border-right: 2px solid black;
+    border-right: 2px solid $mainRed;
 }
