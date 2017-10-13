@@ -1,42 +1,18 @@
+
+
 import { Component } from '@angular/core';
 
-
-export class Item {
-  cardTitle: string;
-  constructor(cardTitle: string){
-    this.cardTitle = cardTitle;
-  }
-
-}
-
-
 @Component({
-  selector: 'app-main',
+  selector: 'app-comp',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 
+export class AppComponent{
 
-
-export class AppComponent {
-  time: number=1;
   
-  cardTitle: string;
-
-  items: Item[] = [];
+  islogin: boolean=true;
 
 
-  addNewToDo(text: string): void {
-    if(text==null || text==undefined || text.trim()=="")
-      return;
-    this.items.push(new Item(text));
-    this.clear();
-  }
-  clear(){
-      this.cardTitle=""
-  }
-  deleteTodo(index) {
-    this.items.splice(index, 1);
-  }
- 
 }
+

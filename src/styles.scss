@@ -18,33 +18,52 @@ body{
     min-width: 1120px;
 }
 
-
+//=================header============================
 .header{
-    min-height: 150px;
+    min-height: 80px;
     color: black;
     background-color: $mainGreen;
     padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   
 }
 .user-info{
-    width: 49%;
-    height: auto;
-    position: relative;
-    top: 39px;
     display: inline-block;
 }
 .right-side-hedder{
-    width: 50%;
-    height: auto;
-    display: inline-block;   
-    position: relative;
-    top: 16px;
+    display: inline-block;
 }
 .exit-wrapper{
     display: flex;
     justify-content: flex-end;
 }
 
+  //=======================Main-menu===========================
+  .main-menu-wrapper{
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+  .main-menu{
+     width: auto;
+     display: flex;
+     justify-content: center;
+  }
+  .main-menu li{
+      display: inline-block;
+      margin-right: 50px;
+      background-color: $mainGreen;
+  }
+  .last-menu-item{
+    margin-right: 0;
+}
+.main-menu li:hover{
+   background-color: lighten($mainGreen, 20%);
+   cursor: pointer;
+}
+  //===========================================================
 
 //=================all buttons stile========================
 .buttons {
@@ -85,7 +104,7 @@ body{
 
  //=================all cards==========================
 .card{
-    width: 200px;
+    width: 250px;
     color: #fff;
     margin: 10px;
     border: 1px solid $secondColor;
@@ -93,14 +112,6 @@ body{
     border-radius: 10px;
     padding: 5px;
     text-align: center;
-}
-.my-cards{
-    min-height: 300px;
-    background-color: hotpink;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
 }
 .cards-field{
     width: 100%;
@@ -111,3 +122,4 @@ body{
 
 }
   //===========================================================
+

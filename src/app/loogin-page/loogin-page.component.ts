@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 
-
-
 @Component({
   selector: 'app-loogin-page',
   templateUrl: './loogin-page.component.html',
@@ -17,5 +15,4 @@ export class LooginPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

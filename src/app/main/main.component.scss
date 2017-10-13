@@ -1,0 +1,39 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    min-height: 500px;
+}
+.scrum-board{
+    flex-grow: 3.5;
+    background-color: blue;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+}
+.scramboard-header{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.scramboard-column{
+    background-color: firebrick;
+    min-height: 500px;
+    width: 25%;
+    min-width: 220px;
+    border: 2px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.to-do{
+    border-left: 2px solid black;
+}
+.done{
+    border-right: 2px solid black;
+}
