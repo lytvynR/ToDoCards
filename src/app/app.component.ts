@@ -10,12 +10,9 @@ import { Component, DoCheck } from '@angular/core';
 })
 
 export class AppComponent{
-  
+  islogin:boolean=true;
   constructor(private loginService:LoginService){
-  }
-  isLogin(){
-    this.loginService.getLoginStatus();
-    console.log("login from AppComponents" + this.loginService.getLoginStatus());
+    
   }
 
 

@@ -14,6 +14,8 @@ import { AddNewCardsComponent } from './add-new-cards/add-new-cards.component';
 import { AboutComponent } from './about/about.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -11,13 +11,11 @@ import { LoginService } from '../Login.Service';
 
 
 export class LooginPageComponent implements OnInit {
-  login_status:boolean;
-  login:any;
+ 
   constructor(private loginService:LoginService) { }
 
   ngOnInit() {
-    this.login_status = this.loginService.getLoginStatus();
-    this.login = this.loginService.Login;
+    
   }
   
 }
