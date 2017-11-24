@@ -1,27 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-
-export class Item {
-  cardTitle: string;
-  constructor(cardTitle: string){
-    this.cardTitle = cardTitle;
-  }
-
-}
-
+import { CardsService } from '../cards.service';
 
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss'],
+  providers:[CardsService]
 })
 
 
 export class MainComponent implements OnInit {
-  time: number=1;
-
-  constructor() { }
-  
+  constructor(private cardsService:CardsService){}
     ngOnInit() {
+     this.cardsService.getCards();
     }
 }

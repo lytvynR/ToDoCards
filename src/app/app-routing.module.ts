@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginGuard } from './loginGuard';
 
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AppComponent } from './app.component';
@@ -17,10 +18,10 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot([
     {path:'login', component: LooginPageComponent},
     {path:'', redirectTo:'login', pathMatch: 'full'},
-    {path:'main', component: MainComponent},
-    {path:'cards', component: MyCardsComponent },
-    {path:'new-card', component: AddNewCardsComponent },
-    {path:'about', component: AboutComponent },
+    {path:'main', component: MainComponent, canActivate: [LoginGuard]},
+    {path:'cards', component: MyCardsComponent, canActivate: [LoginGuard] },
+    {path:'new-card', component: AddNewCardsComponent, canActivate: [LoginGuard] },
+    {path:'about', component: AboutComponent, canActivate: [LoginGuard] },
     {path:'**', component: PageNotFoundComponent },
   ])],
   exports: [RouterModule]

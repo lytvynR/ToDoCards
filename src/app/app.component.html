@@ -1,4 +1,4 @@
-<div *ngIf="islogin">
+<div *ngIf="this.loginService.islogin">
 <div class="header">
   <div class="user-info">
    Welcome &nbsp;<span>UserName!</span><br>
@@ -14,10 +14,11 @@
   
   <div class="right-side-hedder">
     <div class="exit-wrapper">
-    <button routerLink="/login" class="buttons">exit</button>
+    <button routerLink="/login" class="buttons" (click)="this.loginService.login()">exit</button>
     </div>
   </div>
 </div>
 </div>
+<button (click)='relog()'>relog</button>
 
 <router-outlet></router-outlet>

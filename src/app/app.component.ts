@@ -1,21 +1,23 @@
 
 import { LoginService } from './Login.Service';
-import { Component, DoCheck } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-comp',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [LoginService]
 })
 
-export class AppComponent{
-  islogin:boolean=true;
-  constructor(private loginService:LoginService){
+export class AppComponent implements OnInit{
+  
+  constructor(private loginService:LoginService){}
+
+  ngOnInit(){
     
   }
-
-
+  relog(){
+    this.loginService.islogin = !this.loginService.islogin;
+  }
 
   
 
