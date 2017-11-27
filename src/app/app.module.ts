@@ -1,10 +1,13 @@
-import { BrowserModule, NgModule, FormsModule, RouterModule, HttpModule, AppRoutingModule} from './barrel';
+import { BrowserModule, NgModule, FormsModule, RouterModule, AppRoutingModule} from './barrel';
+import { HttpClientModule }    from '@angular/common/http';
+
 
 import { PageNotFoundComponent, AppComponent, LooginPageComponent, RegisterFieldComponent, MainComponent, MyCardsComponent, AddNewCardsComponent, AboutComponent } from './barrel';
 import { LoginService } from './Login.Service';
-import { LoginGuard } from './loginGuard';
-
-
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+import { CardInfoComponent } from './card-info/card-info.component';
+import { CardsService } from './cards.service';
 
 
 @NgModule({
@@ -16,15 +19,19 @@ import { LoginGuard } from './loginGuard';
     MainComponent,
     MyCardsComponent,
     AddNewCardsComponent,
-    AboutComponent 
+    AboutComponent,
+    CardInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [ LoginService, LoginGuard ],
+  providers: [ LoginService, CardsService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

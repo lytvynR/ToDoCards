@@ -1,5 +1,3 @@
-
-import { LoginService } from './Login.Service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,13 +8,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit{
   
-  constructor(private loginService:LoginService){}
+  constructor(){}
 
   ngOnInit(){
     
-  }
-  relog(){
-    this.loginService.islogin = !this.loginService.islogin;
   }
 
   

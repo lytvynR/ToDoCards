@@ -1,0 +1,31 @@
+<div class="my-cards-wrapper" *ngIf="card">
+        <div class="my-cards-list">
+           <div class="my-card">
+              <table id="my-card-table">
+                <tr>
+                  <td class="left" >Card name:</td>
+                  <td><h2>{{card.name}}</h2></td>
+                </tr>
+                <hr>
+                <tr>
+                  <td class="left">Description:</td>
+                  <td><span>{{card.description}}</span></td>
+                </tr>
+                <hr>
+                <tr>
+                  <td class="left">Decorator:</td>
+                  <td>{{card.decorator}}</td>
+                </tr>
+                <hr>
+                <tr>
+                    <td class="left">id:</td>
+                    <td>{{card.id}}</td>
+                </tr>
+              </table>
+              <div class="back-wrapper">
+              <button class="buttons back" (click)="back()"> Back </button>
+              </div>
+          </div>
+          
+        </div>
+    </div>

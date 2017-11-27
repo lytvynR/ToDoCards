@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginGuard } from './loginGuard';
 
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AppComponent } from './app.component';
@@ -10,6 +9,7 @@ import { MainComponent  } from './main/main.component';
 import { MyCardsComponent } from './my-cards/my-cards.component';
 import { AddNewCardsComponent } from './add-new-cards/add-new-cards.component';
 import { AboutComponent } from './about/about.component';
+import { CardInfoComponent } from './card-info/card-info.component';
 
 scrollX
 const routes: Routes = [];
@@ -17,11 +17,12 @@ const routes: Routes = [];
 @NgModule({
   imports: [RouterModule.forRoot([
     {path:'login', component: LooginPageComponent},
-    {path:'', redirectTo:'login', pathMatch: 'full'},
-    {path:'main', component: MainComponent, canActivate: [LoginGuard]},
-    {path:'cards', component: MyCardsComponent, canActivate: [LoginGuard] },
-    {path:'new-card', component: AddNewCardsComponent, canActivate: [LoginGuard] },
-    {path:'about', component: AboutComponent, canActivate: [LoginGuard] },
+    {path:'', redirectTo:'main', pathMatch: 'full'},
+    {path:'main', component: MainComponent},
+    {path:'cards/:id', component: CardInfoComponent},
+    {path:'cards', component: MyCardsComponent},
+    {path:'new-card', component: AddNewCardsComponent},
+    {path:'about', component: AboutComponent},
     {path:'**', component: PageNotFoundComponent },
   ])],
   exports: [RouterModule]

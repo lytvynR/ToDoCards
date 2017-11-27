@@ -1,0 +1,51 @@
+.my-cards-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    }
+    .my-cards-list{
+        width: 50%;
+    }
+    #my-card-table{
+        border-collapse: separate;
+        border-spacing: 20px 10px;
+       
+    }
+    #my-card-table tr{
+        border-bottom: 1px solid black;
+    }
+    .my-card{
+        background-color: rgb(2, 219, 208);
+        border: 2px solid #fe9900;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    .left{
+        text-align: right;
+        width: 150px;
+    }
+    .back{
+        
+        width: 80px;
+        height: 40px;
+    }
+    .back-wrapper{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    
+    
+    
+    @media screen and (max-width: 1450px) {
+        .my-cards-list{
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 1150px) {
+        .my-cards-list{
+            width: 70%;
+        }
+    }

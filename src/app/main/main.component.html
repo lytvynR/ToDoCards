@@ -3,40 +3,42 @@
     <div class="to-do scramboard-column">
       <div class="to-do-header scramboard-header">To do</div>
       <div class="cards-field">
-      <div class="card high">
-        <h3>{{this.cardsService.cards[0].name}}</h3>
-        <label>description {{this.cardsService.cards[0].description}}</label><br>
+
+      <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+        <h3>{{card.name}}</h3>
+        <label>{{card.description}}</label><br>
       </div>
+      
     </div>
     </div>
 
     <div class="in-progress scramboard-column">
       <div class="in-progress-header scramboard-header">In progress</div>
       <div class="cards-field">
-        <div class="card medium">
-          <h3>{{this.cardsService.cards[1].name}}</h3>
-          <label>description {{this.cardsService.cards[1].description}}</label><br>
-        </div>
+          <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+            <h3>{{card.name}}</h3>
+            <label>{{card.description}}</label><br>
+          </div>
       </div>
     </div>
 
     <div class="testing scramboard-column">
       <div class="testing-header scramboard-header">Testing</div>
       <div class="cards-field">
-        <div class="card low">
-          <h3>{{this.cardsService.cards[2].name}}</h3>
-          <label>description {{this.cardsService.cards[2].description}}</label><br>
-        </div>
+          <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+            <h3>{{card.name}}</h3>
+            <label>{{card.description}}</label><br>
+          </div>
       </div>
     </div>
 
     <div class="done scramboard-column">
       <div class="done-header scramboard-header">Done</div>
       <div class="cards-field">
-        <div class="card high">
-          <h3>{{this.cardsService.cards[3].name}}</h3>
-          <label>description {{this.cardsService.cards[3].description}}</label><br>
-        </div>
+          <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+            <h3>{{card.name}}</h3>
+            <label>{{card.description}}</label><br>
+          </div>
       </div>
     </div>
 
