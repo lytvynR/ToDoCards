@@ -1,10 +1,17 @@
 <div class="content">
+  <div class="card-priority-template">
+    <span>Priorities of tasks:</span>
+    <div class="template high"></div><span>High</span>
+    <div class="template medium"></div><span>Medium</span>
+    <div class="template low"></div><span>Low</span>
+  </div><br>
   <div class="scrum-board">
     <div class="to-do scramboard-column">
       <div class="to-do-header scramboard-header">To do</div>
-      <div class="cards-field">
-
-      <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+      <div class="cards-field" *ngIf="cards">
+        <div class="card" routerLink="/cards/{{card.id}}"
+        *ngFor="let card of filterCardsOfStatus('To do')"  
+        [ngClass]="{'high': card.priority == 3, 'medium': card.priority == 2, 'low': card.priority == 1}">
         <h3>{{card.name}}</h3>
         <label>{{card.description}}</label><br>
       </div>
@@ -14,8 +21,10 @@
 
     <div class="in-progress scramboard-column">
       <div class="in-progress-header scramboard-header">In progress</div>
-      <div class="cards-field">
-          <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+      <div class="cards-field" *ngIf="cards">
+          <div class="card" routerLink="/cards/{{card.id}}"
+          *ngFor="let card of filterCardsOfStatus('In progress')" 
+          [ngClass]="{'high': card.priority == 3, 'medium': card.priority == 2, 'low': card.priority == 1}">
             <h3>{{card.name}}</h3>
             <label>{{card.description}}</label><br>
           </div>
@@ -24,8 +33,10 @@
 
     <div class="testing scramboard-column">
       <div class="testing-header scramboard-header">Testing</div>
-      <div class="cards-field">
-          <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+      <div class="cards-field" *ngIf="cards">
+        <div class="card" routerLink="/cards/{{card.id}}"
+        *ngFor="let card of filterCardsOfStatus('Testing')" 
+        [ngClass]="{'high': card.priority == 3, 'medium': card.priority == 2, 'low': card.priority == 1}">
             <h3>{{card.name}}</h3>
             <label>{{card.description}}</label><br>
           </div>
@@ -34,8 +45,10 @@
 
     <div class="done scramboard-column">
       <div class="done-header scramboard-header">Done</div>
-      <div class="cards-field">
-          <div class="card high" routerLink="/cards/{{card.id}}" *ngFor='let card of cards'>
+      <div class="cards-field" *ngIf="cards">
+        <div class="card" routerLink="/cards/{{card.id}}"
+        *ngFor="let card of filterCardsOfStatus('Done')" 
+        [ngClass]="{'high': card.priority == 3, 'medium': card.priority == 2, 'low': card.priority == 1}">
             <h3>{{card.name}}</h3>
             <label>{{card.description}}</label><br>
           </div>

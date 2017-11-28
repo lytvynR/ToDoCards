@@ -1,6 +1,6 @@
 <div class="my-cards-wrapper" *ngIf="card">
         <div class="my-cards-list">
-           <div class="my-card">
+           <div class="my-card" [ngClass]="{'high': card.priority == 3, 'medium': card.priority == 2, 'low': card.priority == 1}">
               <table id="my-card-table">
                 <tr>
                   <td class="left" >Card name:</td>
@@ -13,8 +13,8 @@
                 </tr>
                 <hr>
                 <tr>
-                  <td class="left">Decorator:</td>
-                  <td>{{card.decorator}}</td>
+                  <td class="left">priority:</td>
+                  <td>{{card.priority}}</td>
                 </tr>
                 <hr>
                 <tr>
@@ -23,6 +23,7 @@
                 </tr>
               </table>
               <div class="back-wrapper">
+              <button class="buttons get-card" *ngIf="card.status == 'To do'">Get card</button>
               <button class="buttons back" (click)="back()"> Back </button>
               </div>
           </div>

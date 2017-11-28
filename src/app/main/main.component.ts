@@ -21,8 +21,9 @@ export class MainComponent implements OnInit {
       this.cardsService.getCards()
       .subscribe(cards => this.cards = cards);
     }
-    toDo(arg): boolean{
-      return true;
-    
+
+    filterCardsOfStatus(status){
+      return this.cards.filter(x => x.status == status);
+      
     }
 }

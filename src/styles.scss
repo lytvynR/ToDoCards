@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("reset.css");
 
-$secondColor:   #fe9900 ;
+$secondColor:   #ffb650 ;
 $background: #e5e2d3;
 $mainFont: Phenomena;
 $mainRed: #D84434;
@@ -85,9 +85,10 @@ body{
     transition: background-color 0.3s ease;
     cursor: pointer;
    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.36);
+   border-radius: 10px;
  }
   .buttons:hover {
-    background-color: lighten($secondColor, 20%);
+    background-color: lighten($secondColor, 10%);
     cursor: pointer;
  }
 
@@ -134,15 +135,15 @@ body{
   //==========================priority-clases==================
 
   .high{
-      background-color: #ff0000;
-      border: 2px solid darken(#ff0000, 20%);
+      background-color: #fc6f6f;
+      border: 2px solid darken(#fc6f6f, 10%);
   }
   .medium{
-      background-color: yellow;
-      border: 2px solid darken(#ffff00, 20%);
+      background-color: #72afdc;
+      border: 2px solid darken(#72afdc, 10%);
   }
   .low{
-      background-color: green;
-      border: 2px solid darken(#008000, 20%);
+      background-color: #42a349;
+      border: 2px solid darken(#42a349, 10%);
 
   }

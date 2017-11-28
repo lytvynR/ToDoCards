@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     padding: 20px;
+    color: #fff;
     }
     .my-cards-list{
         width: 50%;
@@ -16,8 +17,7 @@
         border-bottom: 1px solid black;
     }
     .my-card{
-        background-color: rgb(2, 219, 208);
-        border: 2px solid #fe9900;
+     
         border-radius: 10px;
         padding: 10px;
         margin-bottom: 30px;
@@ -27,14 +27,21 @@
         width: 150px;
     }
     .back{
-        
-        width: 80px;
+        font-size: 20px;
+        width: 85px;
         height: 40px;
     }
     .back-wrapper{
         display: flex;
         justify-content: flex-end;
     }
+    .get-card{
+        width: 85px;
+        height: 40px;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    
     
     
     

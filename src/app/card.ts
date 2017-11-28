@@ -2,5 +2,7 @@ export class Card {
     id: number;
     name: string;
     description: string;
-    decorator: number;
+    priority: number;
+    status: string;
+    owner: string;
 }
