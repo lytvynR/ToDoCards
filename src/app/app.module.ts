@@ -3,7 +3,7 @@ import { HttpClientModule }    from '@angular/common/http';
 
 
 import { PageNotFoundComponent, AppComponent, LooginPageComponent, RegisterFieldComponent, MainComponent, MyCardsComponent, AddNewCardsComponent, AboutComponent } from './barrel';
-import { LoginService } from './Login.Service';
+import { LoginService } from './login.Service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { CardInfoComponent } from './card-info/card-info.component';

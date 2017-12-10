@@ -13,7 +13,7 @@ $mainRed: #D84434;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: stretch;
     color: $mainRed;
     border-bottom: 2px solid $mainRed;
 
@@ -33,7 +33,6 @@ $mainRed: #D84434;
     border-top: 2px solid $mainRed;
     border-right: 1px solid $mainRed;
     border-left: 1px solid $mainRed;
-    height: 100%;
 }
 .to-do{
     border-left: 2px solid $mainRed;

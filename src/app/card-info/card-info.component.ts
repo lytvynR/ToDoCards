@@ -17,7 +17,7 @@ export class CardInfoComponent implements OnInit {
   }
 
   getCard(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = parseInt(<string>this.route.snapshot.paramMap.get('id'));
     this.cardsService.getCard(id)
       .subscribe(card => this.card = card);
   }

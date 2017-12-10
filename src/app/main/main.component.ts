@@ -22,8 +22,8 @@ export class MainComponent implements OnInit {
       .subscribe(cards => this.cards = cards);
     }
 
-    filterCardsOfStatus(status){
-      return this.cards.filter(x => x.status == status);
+    filterCardsOfStatus(status:string){
+      return this.cards.filter(x => x.status === status);
       
     }
 }

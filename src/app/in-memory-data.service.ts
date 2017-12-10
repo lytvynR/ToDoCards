@@ -19,6 +19,12 @@ export class InMemoryDataService implements InMemoryDbService {
       { name: 'Narco', description:'hdghrth', priority:3, status:'To do', owner: '', id: 24 },
       { name: 'Bombasto', description:'hdghrth', priority:2, status:'To do', owner: '', id: 25 },
     ];
-    return {CARDS};
+
+    const USERS = [
+      {name: 'Nikola', age: 22, login: 'log1', pwd:'1' , id: 11 },
+      {name: 'Vasia', age: 56, login: '2', pwd:'2', id: 12 },
+      {name: 'Alesha', age: 48, login: '3', pwd:'3', id: 13 },
+    ]
+    return {CARDS, USERS};
   }
 }
