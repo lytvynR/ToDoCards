@@ -1,5 +1,5 @@
 
-<div class="header">
+<div class="header" *ngIf="this.loginService.loginstatus">
   <div class="user-info">
    Welcome &nbsp;<span>UserName!</span><br>
   </div>
@@ -14,6 +14,7 @@
   
   <div class="right-side-hedder">
     <div class="exit-wrapper">
+      <div class="SignOut"  (click)="this.signOut()">SignOut</div>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from './login.Service';
 
 @Component({
   selector: 'app-comp',
@@ -8,13 +10,20 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent implements OnInit{
   
-  constructor(){}
+  constructor(private router: Router, private loginService:LoginService){}
 
   ngOnInit(){
     
   }
-
   
+  signOut(){
+    console.log(this.loginService.loginstatus);
+    if(this.loginService.loginstatus === true){
+      this.router.navigate(['/login']);
+      this.loginService.signOut();
+      console.log('login status changed '+ this.loginService.loginstatus);
+    }
+  }
 
 }
 

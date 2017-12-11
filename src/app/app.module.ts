@@ -8,6 +8,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { CardInfoComponent } from './card-info/card-info.component';
 import { CardsService } from './cards.service';
+import { MainGuard } from './main.guard';
 
 
 
@@ -32,7 +33,7 @@ import { CardsService } from './cards.service';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [ LoginService, CardsService ],
+  providers: [ LoginService, CardsService, MainGuard ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
